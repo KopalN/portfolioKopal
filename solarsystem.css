@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: fill;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(125deg, #00103a 0%, #3e5f77 100%);
+}
+
+#planet {
+    width: 24em;
+    height: 24em;
+    background: url(mercury.jpeg);
+    box-shadow: inset 2em -2em 2em #000, -0.5em -0.5em 1em #51504c;
+    position: relative;
+    background-size: auto;
+    animation: rotate 0.5s linear infinite;
+}
+
+#planet {
+    border-radius: 150%;
+}
+
+@keyframes rotate {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+button {
+    background: transparent;
+    border: none !important;
+    font-size: 50px;
+    position: absolute;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: rgb(6, 107, 195);
+    cursor: pointer;
+}

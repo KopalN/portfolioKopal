@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: fill;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(125deg, #000000 10%, #1b21cf 90%);
+}
+
+.sun {
+    width: 10em;
+    height: 10em;
+    background: url(sub2.jpg);
+    box-shadow: inset 2em -2em 2em #000, -0.5em -0.5em 1em #51504c00;
+    position: relative;
+    background-size: auto;
+    animation: rotate 50s linear infinite;
+    border-style: none;
+}
+
+.sun {
+    border-radius: 150%;
+}
+
+@keyframes rotate {
+    to {
+        background-position: -1000% 0;
+    }
+}
+
+.button {
+    background: transparent;
+    color: none !important;
+    border: none !important;
+    font-size: 50px;
+    position: absolute;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: rgb(238, 238, 238);
+    cursor: pointer;
+    color: black;
+}
+
+#buttontwo {
+    background: transparent;
+    color: none !important;
+    border: none !important;
+    font-size: 50px;
+    position: absolute;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: rgb(238, 238, 238);
+    cursor: pointer;
+    color: black;
+}
+
+.moon {
+    background: url(jupy.jpg);
+    box-shadow: inset 0.5em -0.5em 0.5em #000, -0.5em -0.5em 1em #00000000;
+    width: 7em;
+    height: 7em;
+    position: fixed;
+    right: 60em;
+    left: 100em;
+    z-index: 60em;
+    background-size: auto;
+    transform: translateY(-1);
+    animation: rotate 5s linear infinite, orbit 20s infinite ease-in;
+    z-index: 60;
+}
+
+.moon {
+    border-radius: 150%;
+}
+
+.planet,
+.moon {
+    border-radius: 50%;
+    background-repeat: repeat;
+}
+
+@keyframes orbit {
+    10% {
+        z-index: 100;
+    }
+
+    100% {
+        left: -2em;
+        z-index: -1;
+    }
+    10% {
+        z-index: -1;
+    }
+    200% {
+        right: 200em;
+        z-index: 1;
+    }
+    100% {
+        overscroll-behavior-x: -10;
+    }
+}
